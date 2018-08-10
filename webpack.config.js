@@ -16,10 +16,10 @@ module.exports = {
         port: 3000,
     },
     plugins: [
-        new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
             title: 'My Webpack'
         }),
+        new CleanWebpackPlugin(['dist']),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin()
     ],
