@@ -1,8 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+//const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
+
 
 module.exports = {
     entry: {
@@ -13,9 +14,9 @@ module.exports = {
             title: 'Production'
         }),
         new CleanWebpackPlugin(['views/demo1']),
+        //new ExtractTextPlugin("style.css"),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-        new ExtractTextPlugin("style.css")
     ],
     output: {
         path: path.resolve(__dirname, './views/demo1'),
